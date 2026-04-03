@@ -6,9 +6,15 @@ You use different _applications_ with different _file(s)_ or _tab(s)_ for differ
 
 ## Installation
 
-**Prerequisite:** Node.js v22.18.0 or higher
+**Prerequisite:** Node.js v18+
 
-Run this at the project folder location
+**Install globally:**
+
+```shell
+    $ npm i -g @fusionfroze/fset
+```
+
+**For local development:**
 
 ```shell
     $ npm install
@@ -126,7 +132,3 @@ Output -
         > URls:
             1: https://clandor.com
 ```
-
-## Status
-
-Development ongoing...

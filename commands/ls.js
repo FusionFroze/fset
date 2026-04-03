@@ -1,5 +1,6 @@
 import chalk from "chalk";
 import Conf from "conf";
+import path from "node:path";
 
 const conf = new Conf({ projectName: "fset" });
 
@@ -21,7 +22,7 @@ export default function ls({ long }) {
     for (const application of space) {
       const appName = extractAppName(application);
 
-      console.log(chalk.magentaBright("  --" + appName));
+      console.log(chalk.magentaBright("  -- " + appName));
 
       if (long) {
         console.log(
@@ -41,7 +42,7 @@ export default function ls({ long }) {
 
 export function extractAppName(application) {
   const appPathWithoutExtention = application.app.split(".")[0];
-  const appPathSplit = appPathWithoutExtention.split("\\");
+  const appPathSplit = appPathWithoutExtention.split(path.sep);
   const appName = appPathSplit[appPathSplit.length - 1];
   return appName;
 }
