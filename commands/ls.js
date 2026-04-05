@@ -22,7 +22,7 @@ export default function ls({ long }) {
     for (const application of space) {
       const appName = extractAppName(application);
 
-      console.log(chalk.magentaBright("  -- " + appName));
+      console.log(chalk.magentaBright("  - " + appName));
 
       if (long) {
         console.log(

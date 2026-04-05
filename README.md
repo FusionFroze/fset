@@ -43,6 +43,8 @@ Application 1
 Here you have to enter the path that **exactly** points to the location of the application.
 Then you will be asked to enter URL if you need it.
 
+(**Tip**: If you can't find the path, you can just drag and drop the app into your terminal to paste the path.)
+
 ```shell
 $ fset create demo
 Application 1
@@ -81,6 +83,18 @@ Press enter with an empty input to exit the input interface.
 demo created successfully.
 ```
 
+If you accidentally press **y** when you don't want to add any more applications, you can simply type **exit** to exit the input interface and save the environment you are creating.
+
+```shell
+$ fset create demo
+...
+✔ Add another app? Yes
+Application 2
+✔ Enter the path to the app: exit
+
+demo created successfully.
+```
+
 ### Opening an Environment
 
 ```shell
@@ -95,7 +109,7 @@ This command will open all the applications with set URL(s) or file(s) instantly
 $ fset remove demo
 ```
 
-You will be prompted once to confirm the operation. Once removed the action is irreversible.
+You will be prompted once to confirm the operation. Once removed, the action is irreversible.
 
 ### List all the Environments set up in your machine
 

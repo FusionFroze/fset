@@ -34,6 +34,12 @@ async function createEnv(newEnv) {
       message: chalk.greenBright("Enter the path to the app:"),
       required: true,
     });
+
+    if (appPath === "exit") {
+      gettingNewApplication = false;
+      continue;
+    }
+
     let gettingURLs = true;
     let urlNumber = 1;
     const urls = [];
